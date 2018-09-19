@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XML-RPC client on Python</title>
+</head>
+<body>
+<form action="" method="POST">
+    <i>MyFirstService:</i><br/>
+    <input name="my_first_service" type="submit" value="GO"/>
+    <input type="text" size="30" value="{{form_data.answ}}"/>
+    <hr/>
+    <i>ServiceArgs</i><br/>
+    <table border="0">
+        <tr>
+            <td>Num:</td>
+            <td>
+                <input name="tb_Num" type="text" size="10"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Str:</td>
+            <td>
+                <input name="tb_Str" type="text" size="10"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Arr:</td>
+            <td>
+                {% for i in range(5)%}
+                    <input name="tb_Arr{{i}}" type="text" size="10"/>
+                {% endfor %}
+            </td>
+        </tr>
+        <tr>
+            <td>Struct:</td>
+            <td>
+                field1:
+                <input name="tb_field1" type="text" size="5"/>
+                <input name="tb_field2" type="text" size="5"/>
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <input name="service_args" type="submit" value="GO"/><br/>
+    <b>
+        <pre>{{form_data.answ2}}</pre>
+    </b>
+</form>
+</body>
+</html>
